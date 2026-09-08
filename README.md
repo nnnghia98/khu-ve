@@ -32,6 +32,7 @@ Run these commands from `khu-ve`. Stop a server with Ctrl+C in its terminal.
 yarn build
 yarn lint
 yarn typecheck
+yarn format:check
 ```
 
 The build checks TypeScript and writes the production app to `.next/`. To run it locally after building:
@@ -42,7 +43,7 @@ yarn start
 
 This uses port 8888. Stop the development server before using `yarn start` on the same port. Use `yarn dev --port 8889` if you choose another port. No script publishes the site.
 
-Lint checks the page, motion hook, shared utilities, and Next.js/PostCSS config. The full UI kit is preserved and checked by TypeScript during build.
+Lint checks the pages, shared hooks, utilities, and Next.js/PostCSS config. Use `yarn format` to format project code and data; `yarn format:check` checks formatting without changing files. The copied UI kit and local assets are outside the formatting scope. The full UI kit is preserved and checked by TypeScript during build.
 
 ## Where to edit
 

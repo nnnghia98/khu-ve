@@ -10,8 +10,9 @@
     "build": "next build",
     "start": "next start --port 8888",
     "typecheck": "next typegen && tsc --noEmit",
-    "lint": "oxlint app lib next.config.ts postcss.config.mjs",
-    "format": "oxfmt"
+    "lint": "oxlint app hooks lib next.config.ts postcss.config.mjs",
+    "format": "oxfmt app hooks lib data package.json next.config.ts postcss.config.mjs tsconfig.json",
+    "format:check": "oxfmt --check app hooks lib data package.json next.config.ts postcss.config.mjs tsconfig.json"
   },
   "dependencies": {
     "react": "19.2.6",
