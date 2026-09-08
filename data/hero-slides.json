@@ -1,0 +1,74 @@
+[
+  {
+    "id": "da-nang",
+    "name": "Da Nang",
+    "title": "DA NANG",
+    "image": "/images/da-nang.jpg",
+    "imageAlt": "Da Nang coastline and beachfront skyline beside the sea in Vietnam",
+    "description": "Coastal mornings, mountain views, and the warm heart of Vietnam.",
+    "tagline": "Find your next adventure in Da Nang.",
+    "objectPosition": "center 55%",
+    "mobileObjectPosition": "65% center",
+    "source": "https://unsplash.com/photos/an-aerial-view-of-a-beach-and-a-city-w_0Dk0_JN3A"
+  },
+  {
+    "id": "ha-long",
+    "name": "Ha Long Bay",
+    "title": "HA LONG",
+    "image": "/images/ha-long.jpg",
+    "imageAlt": "Boats drifting among limestone islands in Ha Long Bay",
+    "description": "Drift past emerald waters and limestone islands shaped by the sea.",
+    "tagline": "Let the bay set your pace.",
+    "objectPosition": "center center",
+    "mobileObjectPosition": "center center",
+    "source": "https://unsplash.com/photos/boats-on-turquoise-ha-long-bay-kG7pOXbBfNs"
+  },
+  {
+    "id": "hoi-an",
+    "name": "Hoi An",
+    "title": "HOI AN",
+    "image": "/images/hoi-an.jpg",
+    "imageAlt": "Colorful boats along the riverside in Hoi An",
+    "description": "Wander lantern lit lanes, riverside markets, and timeless old streets.",
+    "tagline": "Slow down and stay awhile.",
+    "objectPosition": "center center",
+    "mobileObjectPosition": "center 35%",
+    "source": "https://unsplash.com/photos/boats-on-a-canal-in-front-of-old-buildings-1_nEuW-prkA"
+  },
+  {
+    "id": "sa-pa",
+    "name": "Sa Pa",
+    "title": "SA PA",
+    "image": "/images/sa-pa.jpg",
+    "imageAlt": "Green rice terraces climbing the hills around Sa Pa",
+    "description": "Follow green rice terraces into cool mountain air and quiet valleys.",
+    "tagline": "Breathe deep in the highlands.",
+    "objectPosition": "center center",
+    "mobileObjectPosition": "center 40%",
+    "source": "https://unsplash.com/photos/a-lush-green-hillside-covered-in-lots-of-green-grass-98g7OAwlWy0"
+  },
+  {
+    "id": "hanoi",
+    "name": "Hanoi",
+    "title": "HANOI",
+    "image": "/images/hanoi.jpg",
+    "imageAlt": "Turtle Tower rising from Hoan Kiem Lake in Hanoi",
+    "description": "Meet old quarter charm, lakeside walks, and the pulse of Hanoi.",
+    "tagline": "See the city in every season.",
+    "objectPosition": "center center",
+    "mobileObjectPosition": "center 40%",
+    "source": "https://unsplash.com/photos/turtle-tower-on-an-island-in-hoan-kiem-lake-hanoi-EGXezZS3aGQ"
+  },
+  {
+    "id": "phu-quoc",
+    "name": "Phu Quoc",
+    "title": "PHU QUOC",
+    "image": "/images/phu-quoc.jpg",
+    "imageAlt": "Palm lined Sao Beach and clear water on Phu Quoc Island",
+    "description": "Trade busy days for soft sand, clear water, and island sunsets.",
+    "tagline": "Your quiet island escape awaits.",
+    "objectPosition": "center center",
+    "mobileObjectPosition": "center 45%",
+    "source": "https://unsplash.com/photos/a-beach-with-palm-trees-and-a-boat-in-the-water-IVJVh1v1PVs"
+  }
+]

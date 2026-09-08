@@ -1,0 +1,34 @@
+[
+  {
+    "id": "vietnam-airlines",
+    "name": "Vietnam Airlines",
+    "logo": "/partners/vietnam-airlines.svg",
+    "width": 300,
+    "height": 36,
+    "source": "https://fr.wikipedia.org/wiki/Fichier:Vietnam_Airlines_Logo.svg"
+  },
+  {
+    "id": "vietjet",
+    "name": "Vietjet",
+    "logo": "/partners/vietjet.svg",
+    "width": 441,
+    "height": 83,
+    "source": "https://commons.wikimedia.org/wiki/File:VietJet_Air_logo.svg"
+  },
+  {
+    "id": "vietravel",
+    "name": "Vietravel",
+    "logo": "/partners/vietravel.png",
+    "width": 1280,
+    "height": 480,
+    "source": "https://commons.wikimedia.org/wiki/File:Vietravel_Logo.png"
+  },
+  {
+    "id": "sun-phu-quoc",
+    "name": "Sun PhuQuoc Airways",
+    "logo": "/partners/sun-phuquoc.png",
+    "width": 1600,
+    "height": 960,
+    "source": "https://sunworld.vn/vi/hon-thom/tin-tuc-sunworld/sun-phuquoc-airways-ra-mat-bieu-trung-nhan-dien-thuong-hieu-ban-sac-viet-vuon-tam-quoc-te-8048"
+  }
+]

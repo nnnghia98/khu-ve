@@ -1,0 +1,11 @@
+# Project notes
+
+- Use short, plain English. Use a lower-tier model for subagents.
+- This is the local Next.js App Router project for the Vacasky Vietnam page.
+- Keep the Da Nang hero, Vietnam content, local assets, and existing animations.
+- No sign-in, Sites dependency, or deployment setup is required.
+- `app/layout.tsx` owns metadata, local fonts, and global CSS imports.
+- `app/page.tsx` is a client component with the landing page interactions.
+- Respect user-managed servers. Do not start or stop them unless asked.
+- Run `npm run build` and `npm run lint` after changes.
+- The build checks all TypeScript. Lint covers application code and config; the copied UI kit is unchanged.

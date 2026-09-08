@@ -1,0 +1,82 @@
+{
+  "reference": "User-provided 648 \u00d7 4096 embedded JPEG in SVG",
+  "implementation": "Next.js App Router page at /v2 with React, TypeScript, scoped CSS, and native browser animation APIs. Original section order, layout, Vietnam content, local photos, and Da Nang hero retained.",
+  "image_notes": {
+    "reference_crops": [
+      "avatar-1.png",
+      "avatar-2.png",
+      "avatar-3.png",
+      "avatar-4.png"
+    ],
+    "recovered_assets": {
+      "map.png": "https://travelbeetourizm.com/images/background/map.png",
+      "partner-1.png": "https://travelbeetourizm.com/images/clients/6.png",
+      "partner-2.png": "https://travelbeetourizm.com/images/clients/7.png",
+      "partner-3.png": "https://travelbeetourizm.com/images/clients/8.png",
+      "partner-4.png": "https://travelbeetourizm.com/images/clients/9.png",
+      "partner-5.png": "https://travelbeetourizm.com/images/clients/10.png",
+      "sarah.png": "https://framerusercontent.com/images/8q2jAclEV4zjrVRZrF7Uz35Vg.png",
+      "angus.png": "https://travelbeetourizm.com/images/resource/author-3.png"
+    },
+    "logo": "Vacasky vector paths from the Framer source, rearranged to match the horizontal reference logo.",
+    "limits": "Vietnam destination photos are from the official Vietnam Tourism website and stored locally as WebP. Asset URLs are under /v2-assets/.",
+    "vietnam_photography": {
+      "da-nang.webp": {
+        "page": "https://vietnam.travel/places-to-go/central-vietnam/da-nang",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/top_banner/public/2018-10/danang%20travel%20guide.jpg?itok=zoiNRYuT"
+      },
+      "hoi-an.webp": {
+        "page": "https://vietnam.travel/places-to-go/central-vietnam/hoi-an",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/top_banner/public/2017-07/vietnam-tourism.jpg?itok=7-1M8j-2"
+      },
+      "ha-long.webp": {
+        "page": "https://vietnam.travel/places-to-go/northern-vietnam/ha-long",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/top_banner/public/2017-06/visitvietnam-3.jpg?itok=0y6lXKIm"
+      },
+      "ninh-binh.webp": {
+        "page": "https://vietnam.travel/places-to-go/northern-vietnam/ninh-binh",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/top_banner/public/2017-06/travel-vietnam-3.jpg?itok=9FFThVIZ"
+      },
+      "hue.webp": {
+        "page": "https://vietnam.travel/places-to-go/central-vietnam/hue",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/top_banner/public/2021-05/Hue%20Travel%20Guide%20Vietnam%20Tourism_0.jpg?itok=ABYvjUC3"
+      },
+      "hanoi.webp": {
+        "page": "https://vietnam.travel/places-to-go/northern-vietnam/ha-noi",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/top_banner/public/2017-06/vietnam-travel-5.jpg?itok=uCqGcaUu"
+      },
+      "da-nang-beach.webp": {
+        "page": "https://vietnam.travel/places-to-go/central-vietnam/da-nang",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/article_photo_large/public/2021-05/My%20Khe%20Beach%20Da%20Nang%20Vietnam.jpg?itok=JDdlDqyn"
+      },
+      "da-nang-bridge.webp": {
+        "page": "https://vietnam.travel/places-to-go/central-vietnam/da-nang",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/article_photo_large/public/2021-05/Golden%20Bridge%20Da%20Nang%20Vietnam%20Tourism.jpg?itok=hDkiNmQY"
+      },
+      "sa-pa-terraces.webp": {
+        "page": "https://vietnam.travel/places-to-go/northern-vietnam/sapa",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/article_photo_large/public/2021-05/Sapa%20Rice%20Terraces%20Vietnam%20Tourism.jpg?itok=sR_xl6dl"
+      },
+      "sa-pa-trek.webp": {
+        "page": "https://vietnam.travel/places-to-go/northern-vietnam/sapa",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/article_photo_large/public/2021-05/Trekking%20in%20Sapa%20Vietnam.jpg?itok=q7USBQ1h"
+      },
+      "ha-long-islets.webp": {
+        "page": "https://vietnam.travel/places-to-go/northern-vietnam/ha-long",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/article_photo_large/public/2021-05/Ha%20Long%20Islets.jpg?itok=I0RmAEG3"
+      },
+      "phu-quoc-islands.webp": {
+        "page": "https://vietnam.travel/places-to-go/southern-vietnam/phu-quoc",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/article_photo_large/public/2021-05/Island-hopping%20Tours%20in%20Phu%20Quoc%20Vietnam.jpg?itok=fAspzsro"
+      },
+      "phu-quoc-coast.webp": {
+        "page": "https://vietnam.travel/places-to-go/southern-vietnam/phu-quoc",
+        "image": "https://image.vietnam.travel/sites/default/files/styles/article_photo_large/public/2019-01/Phu%20Quoc%20Vietnam%20Travel-3.jpg?itok=mT2NHwaO"
+      }
+    }
+  },
+  "fonts": {
+    "Oswald": "https://fonts.google.com/specimen/Oswald",
+    "Poppins": "https://fonts.google.com/specimen/Poppins"
+  }
+}
