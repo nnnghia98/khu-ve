@@ -46,7 +46,8 @@ Lint checks the page, motion hook, shared utilities, and Next.js/PostCSS config.
 
 ## Where to edit
 
-- `app/page.tsx`: page sections, copy, trip data, and interactions.
+- `app/page.tsx`: page sections and interactions.
+- `app/content.ts`: homepage trip data, reviews, awards, FAQ, articles, and gallery photos.
 - `.brand-wordmark` in `app/globals.css`: live KHUVÉ text in the header and footer, with responsive sizes and colors.
 - `public/fonts/fjord-bc.woff`: Fjord BC, loaded locally by `app/layout.tsx` for the wordmark. Source: `https://bcassetcdn.com/fonts/fjord-bc-vtwo.woff`, as used by the Design.com editor.
 - `public/favicon.svg`: matching K site icon.

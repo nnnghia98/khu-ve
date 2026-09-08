@@ -6,6 +6,7 @@
 - No sign-in, Sites dependency, or deployment setup is required.
 - `app/layout.tsx` owns metadata, local fonts, and global CSS imports.
 - `app/page.tsx` is a client component with the landing page interactions.
+- `app/content.ts` owns the homepage travel data and gallery photos.
 - Respect user-managed servers. Do not start or stop them unless asked.
 - Run `npm run build` and `npm run lint` after changes.
 - The build checks all TypeScript. Lint covers application code and config; the copied UI kit is unchanged.
