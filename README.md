@@ -111,6 +111,8 @@ Destination copy is based on the official Vietnam Tourism guides for [Da Nang](h
 
 The homepage hero rolls its photo, title, and description together over 850 ms using Emil's `--ease-in-out` curve. Each slide stays for 6 seconds. Controls can pause, resume, or choose a destination. Focus and manual navigation pause autoplay; hidden tabs and an offscreen hero suspend it. Reduced motion keeps the hero still and makes manual changes instant. The search form and partner logos remain in place.
 
+The hero tracks completion and cancellation of the current CSS animation. Keyboard use can skip or cancel a transition without leaving playback stuck. A new slide selection replaces the previous completion handler.
+
 The second pass applies [Emil Kowalski's animation guidance](https://github.com/emilkowalski/skills/tree/main/skills/animate) and [Apple design principles](https://github.com/emilkowalski/skills/tree/main/skills/apple-design).
 
 - Floating glass navigation with a solid fallback, mobile disclosure, Escape dismissal, and hidden-menu focus protection.

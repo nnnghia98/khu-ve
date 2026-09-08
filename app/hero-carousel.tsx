@@ -27,6 +27,7 @@ export function HeroCarousel({
   children: ReactNode;
 }) {
   const sectionRef = useRef<HTMLElement>(null);
+  const imageTrackRef = useRef<HTMLDivElement>(null);
   const positionRef = useRef(1);
   const queuedStep = useRef(0);
   const [position, setPosition] = useState(1);
@@ -65,13 +66,29 @@ export function HeroCarousel({
     moveTo(positionRef.current + direction, keyboard || reducedMotion);
   }
 
-  function finishRoll() {
+  const finishRoll = useCallback(() => {
     setMoving(false);
     const current = positionRef.current;
     if (current === 0 || current === count + 1) {
       moveTo(realPosition(current), true);
     }
-  }
+  }, [moveTo]);
+
+  useEffect(() => {
+    if (!moving) return;
+    let current = true;
+    // Keyboard mode can skip or cancel the CSS transition. Both still finish
+    // the move; a newer position cancels this completion through cleanup.
+    const animations = imageTrackRef.current?.getAnimations() ?? [];
+    void Promise.allSettled(
+      animations.map((animation) => animation.finished),
+    ).then(() => {
+      if (current && positionRef.current === position) finishRoll();
+    });
+    return () => {
+      current = false;
+    };
+  }, [moving, position, finishRoll]);
 
   useEffect(() => {
     const ready = Array.from(
@@ -177,14 +194,8 @@ export function HeroCarousel({
       <div className="hero-image-window">
         <div
           className="hero-roll-track hero-image-track"
+          ref={imageTrackRef}
           style={trackStyle}
-          onTransitionEnd={(event) => {
-            if (
-              event.target === event.currentTarget &&
-              event.propertyName === 'transform'
-            )
-              finishRoll();
-          }}
         >
           {frames.map((slide, index) => (
             <div
