@@ -6,9 +6,17 @@ import {
   useLayoutEffect,
   useRef,
   useState,
+  useSyncExternalStore,
   type SubmitEvent,
 } from 'react';
 import { createV2Motion } from './create-motion';
+import {
+  getTripPlanSnapshot,
+  parseTripPlan,
+  saveTripPlan,
+  subscribeTripPlan,
+  type TripPlan,
+} from './trip-plan';
 import {
   articles,
   categories,
@@ -35,7 +43,7 @@ function DestinationCard({
   onOpen,
 }: {
   destination: Destination;
-  onOpen: (name: string) => void;
+  onOpen: (destination: Destination) => void;
 }) {
   return (
     <button
@@ -43,7 +51,7 @@ function DestinationCard({
       className={`v2-destination-card${destination.featured ? ' v2-is-featured' : ''}`}
       data-country={destination.name}
       data-price={destination.price}
-      onClick={() => onOpen(destination.name)}
+      onClick={() => onOpen(destination)}
     >
       <Image
         unoptimized
@@ -105,6 +113,12 @@ export default function V2Page() {
   const [activeDialog, setActiveDialog] = useState<DialogName | null>(null);
   const [tripDestination, setTripDestination] = useState('Da Nang');
   const [tripDate, setTripDate] = useState('2026-10-23');
+  const [tripPackageId, setTripPackageId] = useState('');
+  const [tripTravelers, setTripTravelers] = useState('2');
+  const [tripEmail, setTripEmail] = useState('');
+  const savedPlan = parseTripPlan(
+    useSyncExternalStore(subscribeTripPlan, getTripPlanSnapshot, () => null),
+  );
   const [minDate, setMinDate] = useState('');
   const [tripMessage, setTripMessage] = useState('');
   const [newsletterStatus, setNewsletterStatus] = useState('');
@@ -263,10 +277,27 @@ export default function V2Page() {
     for (const select of searchForm.current?.querySelectorAll('select') || [])
       select.value = 'all';
   };
-  const openTrip = (destination: string) => {
-    setTripDestination(destination);
+  const openTrip = (destination: Destination | string) => {
+    setTripDestination(
+      typeof destination === 'string'
+        ? destination
+        : destination.label || destination.name,
+    );
+    setTripPackageId(typeof destination === 'string' ? '' : destination.id);
     setTripDate(formText(new FormData(searchForm.current!), 'date'));
+    setTripTravelers('2');
+    setTripEmail('');
     setTripMessage('');
+    setActiveDialog('trip');
+  };
+  const openSavedTrip = () => {
+    if (!savedPlan) return;
+    setTripDestination(savedPlan.destination);
+    setTripPackageId(savedPlan.packageId);
+    setTripDate(savedPlan.date);
+    setTripTravelers(savedPlan.travelers);
+    setTripEmail(savedPlan.email);
+    setTripMessage('Your saved plan is ready to review or edit.');
     setActiveDialog('trip');
   };
   const closeDialog = () => setActiveDialog(null);
@@ -287,11 +318,15 @@ export default function V2Page() {
   };
   const saveTrip = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = Object.fromEntries(new FormData(event.currentTarget));
-    const saved = saveLocal(
-      'vacasky-v2-trip-plan',
-      JSON.stringify({ ...data, savedAt: new Date().toISOString() }),
-    );
+    const plan: TripPlan = {
+      destination: tripDestination,
+      packageId: tripPackageId,
+      date: tripDate,
+      travelers: tripTravelers,
+      email: tripEmail,
+      savedAt: new Date().toISOString(),
+    };
+    const saved = saveTripPlan(plan);
     setTripMessage(
       saved
         ? 'Trip plan saved on this device. No payment or booking was made.'
@@ -613,6 +648,15 @@ export default function V2Page() {
             >
               {more ? 'Show Fewer Destinations' : 'Load More Destinations'}
             </button>
+            {savedPlan && (
+              <button
+                type="button"
+                className="v2-button v2-outline"
+                onClick={openSavedTrip}
+              >
+                Open saved trip plan
+              </button>
+            )}
           </div>
         </section>
 
@@ -1321,7 +1365,10 @@ export default function V2Page() {
               name="destination"
               required
               value={tripDestination}
-              onChange={(event) => setTripDestination(event.target.value)}
+              onChange={(event) => {
+                setTripDestination(event.target.value);
+                setTripPackageId('');
+              }}
             />
           </label>
           <div className="v2-form-row">
@@ -1344,7 +1391,8 @@ export default function V2Page() {
                 name="travelers"
                 min="1"
                 max="20"
-                defaultValue="2"
+                value={tripTravelers}
+                onChange={(event) => setTripTravelers(event.target.value)}
                 required
               />
             </label>
@@ -1357,6 +1405,8 @@ export default function V2Page() {
               autoComplete="email"
               placeholder="you@example.com"
               required
+              value={tripEmail}
+              onChange={(event) => setTripEmail(event.target.value)}
             />
           </label>
           <button className="v2-button v2-primary" type="submit">

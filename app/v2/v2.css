@@ -542,6 +542,10 @@ html:has(.v2-page) {
   opacity: 1;
 }
 .v2-page .v2-destinations > .v2-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   margin-top: 3.4rem;
 }
 .v2-page .v2-search-summary {

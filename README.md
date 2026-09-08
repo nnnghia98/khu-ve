@@ -59,6 +59,7 @@ Lint checks the pages, shared hooks, utilities, and Next.js/PostCSS config. Use 
 - `public/partners/`: local partner logos, shown in white over the hero.
 - `app/v2/page.tsx`: version 2 sections, search, dialogs, gallery, and forms.
 - `app/v2/content.ts`: version 2 destinations, gallery photos, and articles.
+- `app/v2/trip-plan.ts`: saved plan fields and safe browser storage reads, including older plans.
 - `app/v2/v2.css`: scoped version 2 layout, responsive styles, and transitions.
 - `app/v2/create-motion.ts`: version 2 reveals, spring filter indicator, card movement, and motion cleanup.
 - `public/v2-assets/`: version 2 local images and source manifest.
@@ -87,6 +88,8 @@ This is a frontend implementation with no sign-in requirement. Real bookings, pa
 Dates and budgets in search are trip preferences; only destination selection filters the sample catalog. Awards, counts, and testimonials are sample content for this design and are not verified business claims.
 
 On `/v2`, search filters by destination and price, and category buttons filter the same results. “Load More Destinations” adds four sample packages. Trip plans and newsletter emails save only in this browser, using separate `vacasky-v2-*` storage keys. The photo gallery, article dialogs, and FAQ work locally. Reduced motion and keyboard use skip decorative movement.
+
+“Open saved trip plan” appears below the destination cards when a plan is saved. It restores the latest saved destination, date, traveler count, and email after a reload. Saving again replaces that plan. Extra packages keep their full name and package ID; editing the destination clears the old package ID. Older saved plans still open. Unreadable or broken storage does not stop the page from working.
 
 ## Image sources
 
